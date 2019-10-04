@@ -3,7 +3,7 @@
   define('DB_HOST', 'localhost');
   define('DB_USER', 'root');
   define('DB_PASS', '');
-  define('DB_NAME', 'phpblog');
+  define('DB_NAME', 'blog');
   
   // App Root
   // C:\xampp\htdocs\MVC\app\config\config.php
@@ -18,7 +18,7 @@
   define('URLROOT', 'http://localhost/MVC');
 
   // Ime Sajta
-  define('SITENAME', 'Plesna skola');
+  define('SITENAME', 'UMD');
 
 
    
