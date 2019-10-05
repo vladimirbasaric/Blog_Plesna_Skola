@@ -4,6 +4,3 @@
     <div class="text"><em>UMD Dance Community</em></div>
   </div>
 </section>
-    
-
-    
