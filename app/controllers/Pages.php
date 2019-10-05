@@ -5,13 +5,8 @@
     }
 
     public function index(){
-
       // posto smo extendovali Controller.php mozemo da pristupimo u model i view
-      $data = [
-        'title' => 'Dobro dosli',
-      ];
-
-      $this->view('pages/index', $data); 
+      $this->view('pages/index'); 
     }
 
     public function about(){
@@ -19,5 +14,19 @@
         'title' => 'O nama'
       ];
       $this->view('pages/about', $data);
+    }
+
+    public function gallery(){
+      $data = [
+        'title' => 'galerija'
+      ];
+      $this->view('pages/gallery', $data);
+    }
+
+    public function blog(){
+      $data = [
+        'title' => 'blog'
+      ];
+      $this->view('pages/blog', $data);
     }
   }

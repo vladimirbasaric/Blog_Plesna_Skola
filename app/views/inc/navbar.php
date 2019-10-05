@@ -1,5 +1,5 @@
 <!-- Navbar preuzet sa https://getbootstrap.com/docs/4.3/components/navbar/-->
-<nav class="navbar navbar-expand-md navbar-light bg-light p-0 pl-3 font-weight-bold">
+<nav class="navbar navbar-expand-md navbar-light bg-light p-0 pl-3 text-uppercase fixed-top font-weight-bold">
   <a class="navbar-brand" href="<?php echo URLROOT; ?>">
     <img src="./public/img/dance.jpg" alt="logo">
   </a>
