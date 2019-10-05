@@ -30,9 +30,9 @@
         target="_blank">
         <i class="fas fa-map-marked-alt fa-3x"></i>
       </a>
-      <h3>Kontakt i Lokacija</h3>
+      <h3>Lokacija na Mapi</h3>
       <p>
-        064 98 79 228 <br />umdples@gmail.com <br />Resavska 28, Beograd
+        Resavska 28, Beograd
       </p>
     </div>
   </div>

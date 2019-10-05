@@ -63,9 +63,9 @@ section {
   margin: auto;
 }
 
-a {
+/* a {
   color: #f4f4f4;
-}
+} */
 
 a:hover {
   color: #6d6666;
@@ -74,4 +74,14 @@ a:hover {
 .line {
   border-bottom: #333 dashed 1px;
   padding: 1.2rem 1rem;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #f4f4f4;
 }
