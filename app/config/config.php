@@ -13,9 +13,10 @@
   // echo dirname(dirname(__FILE__));
   // i na kraju ga ubacujemo u konstantu pomocu define f-je
   define('APPROOT', dirname(dirname(__FILE__)));
-
+  // echo APPROOT;
   // URL Root
   define('URLROOT', 'http://localhost/MVC');
+  // echo URLROOT;
 
   // Ime Sajta
   define('SITENAME', 'UMD');

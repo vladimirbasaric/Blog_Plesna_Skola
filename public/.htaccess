@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
   Options -Multiviews
   RewriteEngine On
+  #linija koda ispod moze i da se obrise
   RewriteBase /MVC/public
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f

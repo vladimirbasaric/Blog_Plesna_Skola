@@ -7,6 +7,7 @@
     public function index(){
       // posto smo extendovali Controller.php mozemo da pristupimo u model i view
       $this->view('pages/index'); 
+
     }
 
     public function about(){

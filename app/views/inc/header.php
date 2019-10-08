@@ -10,6 +10,8 @@
   <script src="https://kit.fontawesome.com/6098da2bff.js" crossorigin="anonymous"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/style.css">
+  <!-- lightbox gallery -->
+  <link href="<?php echo URLROOT; ?>/css/lightbox.min.css" rel="stylesheet" />
   <title><?php echo SITENAME; ?></title>
 </head>
 <body>

@@ -1,7 +1,7 @@
 <!-- Navbar preuzet sa https://getbootstrap.com/docs/4.3/components/navbar/-->
 <nav class="navbar navbar-expand-md navbar-light bg-light p-0 pl-3 text-uppercase fixed-top font-weight-bold">
   <a class="navbar-brand" href="<?php echo URLROOT; ?>">
-    <img src="./public/img/dance.jpg" alt="logo">
+    <img src="../public/img/dance.jpg" alt="logo">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
