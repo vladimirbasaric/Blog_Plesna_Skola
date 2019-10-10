@@ -11,23 +11,14 @@
     }
 
     public function about(){
-      $data = [
-        'title' => 'O nama'
-      ];
-      $this->view('pages/about', $data);
+      $this->view('pages/about');
     }
 
     public function gallery(){
-      $data = [
-        'title' => 'galerija'
-      ];
-      $this->view('pages/gallery', $data);
+      $this->view('pages/gallery');
     }
 
     public function blog(){
-      $data = [
-        'title' => 'blog'
-      ];
-      $this->view('pages/blog', $data);
+      $this->view('pages/blog');
     }
   }
