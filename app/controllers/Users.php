@@ -1,7 +1,7 @@
 <?php
   class Users extends Controller {
     public function __construct(){
-
+      $this->userModel = $this->model('User');
     }
 
     public function register(){
@@ -27,6 +27,11 @@
         // Validacija Email-a
         if(empty($data['email'])){
           $data['email_err'] = 'Unesite email';
+        } else {
+          // proveravamo (trazimo) email
+          if($this->userModel->findUserByEmail($data['email'])){
+            $data['email_err'] = 'Email je zauzet.';
+          }
         }
 
         // Validacija imena
@@ -53,7 +58,18 @@
         // proveravamo da li ima grsaka, tj. da li su errors prazne
         if(empty($data['email_err']) && empty($data['name_err']) && empty($data['password_err']) && empty($data['confirm_password_err'])){
           // uspesno validirino
-          die('SUCCESS');
+
+          // hasujemo sifru
+          $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
+          // Registracija Usera
+          if($this->userModel->register($data)){
+            flash('register_success', 'Uspesno ste registrovani, možete se ulogovati');
+            redirect('users/login'); 
+          } else {
+            die('nesto ne valja');
+          }
+
         } else {
           // ucitavamo view sa greskama
           $this->view('users/register', $data);
@@ -102,10 +118,28 @@
           $data['password_err'] = 'Unesite šifru';
         }
 
+        // proveravamo user/email
+        if($this->userModel->findUserByEmail($data['email'])){
+          // pronadjen
+        } else {
+          // nije pronadjen
+          $data['email_err'] = 'Korisnik nije pronadjen';
+        }
+
         // proveravamo da li ima grsaka, tj. da li su errors prazne
         if(empty($data['email_err']) && empty($data['password_err'])){
           // uspesno validirino
-          die('SUCCESS');
+          //setujemo ulogovanog korisnika
+          $loggedInUser = $this->userModel->login($data['email'], $data['password']);
+
+          if($loggedInUser){
+            // kreiramo session
+            $this->createUserSession($loggedInUser);
+          } else{
+            $data['password_err'] = 'Neispravna šifra';
+
+            $this->view('users/login', $data);
+          }
         } else {
           // ucitavamo view sa greskama
           $this->view('users/login', $data);
@@ -123,6 +157,29 @@
 
         // ucitavamo view
         $this->view('users/login', $data);
+      }
+    }
+
+    public function createUserSession($user){
+      $_SESSION['user_id'] = $user->id;
+      $_SESSION['user_email'] = $user->email;
+      $_SESSION['user_name'] = $user->name;
+      redirect('pages/index');
+    }
+
+    public function logout(){
+      unset($_SESSION['user_id']);
+      unset($_SESSION['user_email']);
+      unset($_SESSION['user_name']);
+      session_destroy();
+      redirect('users/login');
+    }
+
+    public function isLoggedIn(){
+      if(isset($_SESSION['user_id'])){
+        return true;
+      } else {
+        return false;
       }
     }
   }

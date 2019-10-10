@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-md-7 mx-auto">
         <div class="card card-body bg-light mt-5 mb-5">
+          <?php flash('register_success'); ?>
           <h2>Ulogujte se</h2>
           <form action="<?php echo URLROOT; ?>/users/login" method="post">
             <div class="form-group">
