@@ -26,6 +26,9 @@
     <ul class="navbar-nav ml-auto">
       <?php if(isset($_SESSION['user_id'])) : ?>
       <li class="nav-item mr-3">
+        <a class="nav-link" href="#"><?php echo $_SESSION['user_name']; ?></a>
+      </li>
+      <li class="nav-item mr-3">
         <a class="nav-link" href="<?php echo URLROOT; ?>/users/logout">Izlogujte se</a>
       </li>
       <?php else : ?>

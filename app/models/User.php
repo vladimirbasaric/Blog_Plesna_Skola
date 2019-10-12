@@ -40,7 +40,7 @@
     // trazimo usera preko emaila
     public function findUserByEmail($email){
       $this->db->query('SELECT * FROM users WHERE email = :email');
-      // 'bindujemo' vrednosti
+      // 'bajndujemo' vrednosti
       $this->db->bind(':email', $email);
 
       $row = $this->db->single();
@@ -51,5 +51,16 @@
       } else {
         return false;
       }
+    }
+
+    // Trazimo usera preko id-a
+    public function getUserById($id){
+      $this->db->query('SELECT * FROM users WHERE id = :id');
+      // bajndujemo vrednost
+      $this->db->bind(':id', $id);
+
+      $row = $this->db->single();
+
+      return $row;
     }
   }

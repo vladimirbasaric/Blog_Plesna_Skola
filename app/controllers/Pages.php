@@ -6,8 +6,8 @@
 
     public function index(){
       // posto smo extendovali Controller.php mozemo da pristupimo u model i view
+      
       $this->view('pages/index'); 
-
     }
 
     public function about(){
@@ -19,6 +19,10 @@
     }
 
     public function blog(){
+      if(isLoggedIn()){
+        redirect('posts');
+      }
+
       $this->view('pages/blog');
     }
   }

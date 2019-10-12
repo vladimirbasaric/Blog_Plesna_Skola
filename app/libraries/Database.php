@@ -22,9 +22,8 @@
 
       // instanciramo PDO 
       try{
-        $this->dbh = new PDO($dsn, $this->user, $this->pass, $options)
-        ;
-      } catch (PDOException $e){
+        $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
+      } catch(PDOException $e){
         $this->error = $e->getMessage();
         echo $this->error;
       }
@@ -53,7 +52,7 @@
         }
       }
 
-      $this->stmt->bindValue($param, $value, $type );
+      $this->stmt->bindValue($param, $value, $type);
     }
 
     // izvrsavanje 
@@ -68,7 +67,7 @@
     }
 
     // dobijamo objekat
-    public function single (){
+    public function single(){
       $this->execute();
       return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
@@ -77,5 +76,4 @@
     public function rowCount(){
       return $this->stmt->rowCount();
     }
-
   }

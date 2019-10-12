@@ -78,23 +78,18 @@
         <div class="text-center text-md-right">
           <ul class="list-unstyled list-inline">
             <li class="list-inline-item">
-              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-facebook-f"></i>
+              <a class="btn-floating btn-sm rgba-white-slight mx-1" href="https://www.facebook.com/pg/umdworld/about/" target="_blank">
+                <i class="fab fa-facebook fa-2x"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-twitter"></i>
+              <a class="btn-floating btn-sm rgba-white-slight mx-1" href="https://www.youtube.com/channel/UCAqnKcFBHCrg66uPjRf5nIw" target="_blank">
+                <i class="fab fa-youtube fa-2x"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-google-plus-g"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-linkedin-in"></i>
+              <a class="btn-floating btn-sm rgba-white-slight mx-1" href="https://www.instagram.com/umdworld/" target="_blank">
+                <i class="fab fa-instagram fa-2x"></i>
               </a>
             </li>
           </ul>
