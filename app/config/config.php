@@ -13,7 +13,7 @@
   // echo dirname(dirname(__FILE__));
   // i na kraju ga ubacujemo u konstantu pomocu define f-je
   define('APPROOT', dirname(dirname(__FILE__)));
-  // echo APPROOT;
+  // echo APPROOT;    C:\xampp\htdocs\MVC\app
   // URL Root
   define('URLROOT', 'http://localhost/MVC');
   // echo URLROOT;
