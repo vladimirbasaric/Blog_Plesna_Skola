@@ -23,7 +23,7 @@
         unset($url[0]);
       }
 
-      // Require controller
+      // Require controller sko postoji u controllers folderu
       require_once '../app/controllers/'. $this->currentController . '.php';
 
       // instanciramo controller klasu npr:

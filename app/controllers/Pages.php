@@ -17,12 +17,4 @@
     public function gallery(){
       $this->view('pages/gallery');
     }
-
-    public function blog(){
-      if(isLoggedIn()){
-        redirect('posts');
-      }
-
-      $this->view('pages/blog');
-    }
   }

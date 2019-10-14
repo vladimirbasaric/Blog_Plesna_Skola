@@ -18,9 +18,16 @@
       <li class="nav-item ml-3">
         <a class="nav-link" href="<?php echo URLROOT; ?>/pages/gallery">Galerija</a>
       </li>
+     <!-- Ulazak na blog je moguc samo ako je korisnik registrovan -->
+     <?php if(isset($_SESSION['user_id'])) : ?>
       <li class="nav-item ml-3">
-        <a class="nav-link" href="<?php echo URLROOT; ?>/pages/blog">Blog</a>
+        <a class="nav-link" href="<?php echo URLROOT; ?>/posts/">Blog</a>
       </li>
+      <?php else : ?>
+      <li class="nav-item ml-3">
+        <a class="nav-link" href="<?php echo URLROOT; ?>/users/register">Blog</a>
+      </li>
+      <?php endif; ?>
     </ul>
 
     <ul class="navbar-nav ml-auto">
