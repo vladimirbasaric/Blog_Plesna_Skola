@@ -4,7 +4,7 @@
       if(!isLoggedIn()){
         redirect('users/login');
       }
-
+      // ovako loadujemo modele
       $this->postModel = $this->model('Post');
       $this->userModel = $this->model('User');
     }

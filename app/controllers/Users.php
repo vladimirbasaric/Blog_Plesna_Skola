@@ -1,11 +1,12 @@
 <?php
   class Users extends Controller {
     public function __construct(){
+      //konstruktor nam sluzi da loadujemo model
       $this->userModel = $this->model('User');
     }
 
     public function register(){
-      // Proverava POST
+      // Proverava POST request. Ako nije POST prelazi na else koji samo ucitava view sa praznim poljima
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // preusmeravamo na form
 

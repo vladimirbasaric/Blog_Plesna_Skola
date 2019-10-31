@@ -1,5 +1,6 @@
 <?php
   class Post {
+    // Da bismo pristupili bazi moramo da kreiramo property $db
     private $db;
 
     public function __construct(){

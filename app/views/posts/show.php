@@ -3,13 +3,15 @@
     <a href="<?php echo URLROOT; ?>/posts" class=" mt-3 btn btn-light">
       <i class="fa fa-backward"></i> Nazad
     </a>
-    <br>
-    <h1><?php echo $data['post']->title; ?></h1>
-    <div class="bg-light text-black p-2 mb-3">
-      Autor: <?php echo $data['user']->name; ?> datuma: <?php echo $data['post']->created_at; ?>
+    <div class="card card-body mt-3 mb-3 bg-dark">
+      <h1><?php echo $data['post']->title; ?></h1>
+      <p><?php echo $data['post']->body; ?></p>
+    </div>
+    <div class="bg-dark card card-body p-2 mb-3">
+      Autor: <?php echo $data['user']->name; ?> <hr> Datum objave: <?php echo $data['post']->created_at; ?>
     </div>
 
-    <p><?php echo $data['post']->body; ?></p>
+    
 
     <?php if($data['post']->user_id == $_SESSION['user_id']) : ?>
       <hr>

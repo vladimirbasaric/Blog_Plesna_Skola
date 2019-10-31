@@ -5,14 +5,14 @@
     <!-- Footer links -->
     <div class="row text-center text-md-left mt-3 pb-3">
       <!-- Grid column -->
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+      <div class="col-md-8 col-lg-9 col-xl-9 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">UNIVERSAL MIX DANCE</h6>
         <p>Plesna grupa izvodi popularne i tradicionalne africke plesove, denshol kulturu, kao i regeton primeren za sve uzraste. Pored toga mozete da naucite rnb i hiphop stilove koje forsiraju danasnje pop zvezde.</p>
       </div>
       <!-- Grid column -->
       <hr class="w-100 clearfix d-md-none">
       <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+      <!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">Plesovi</h6>
         <p>
           <a href="#!">AFRO</a>
@@ -26,11 +26,11 @@
         <p>
           <a href="#!">HIP-HOP</a>
         </p>
-      </div>
+      </div> -->
       <!-- Grid column -->
-      <hr class="w-100 clearfix d-md-none">
+      <!-- <hr class="w-100 clearfix d-md-none"> -->
       <!-- Grid column -->
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+      <!-- <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">KORISNI LINKOVI</h6>
         <p>
           <a href="#!">Vas Nalog</a>
@@ -44,9 +44,9 @@
         <p>
           <a href="#!">Pomoć</a>
         </p>
-      </div>
+      </div> -->
       <!-- Grid column -->
-      <hr class="w-100 clearfix d-md-none">
+      <!-- <hr class="w-100 clearfix d-md-none"> -->
       <!-- Grid column -->
       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">Kontakt</h6>

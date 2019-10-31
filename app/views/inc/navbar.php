@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light p-0 pl-3 text-uppercase font-weight-bold">
-  <a class="navbar-brand" href="<?php echo URLROOT; ?>/pages/">
-    <img src="../public/img/dance.jpg" alt="logo">
+  <a class="navbar-brand" href="<?php echo URLROOT; ?>">
+    <!-- <img src="../public/img/dance.jpg" alt="logo"> -->UMD
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ">
       <li class="nav-item ml-3">
-        <a class="nav-link" href="<?php echo URLROOT; ?>/pages/">Početna <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo URLROOT; ?>">Početna <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ml-3">
         <a class="nav-link" href="<?php echo URLROOT; ?>/pages/about">O nama</a>

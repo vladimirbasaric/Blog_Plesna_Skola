@@ -8,15 +8,18 @@
     private $pass = DB_PASS;
     private $dbname = DB_NAME;
     
+    // Data-Base-Handler 
     private $dbh;
     private $stmt;
     private $error;
 
     public function __construct(){
-      // Set DSN
+      // Set DSN skraceno od Data Source Name
       $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
       $options = array(
+        // ovo ubrzava performanse tako sto proverava da li je uspostavljena konekcija sa DB
         PDO::ATTR_PERSISTENT => true,
+        // PDO ima 3 moda za greske: silent, warning i exception
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
       );
 
@@ -29,7 +32,7 @@
       }
     }
 
-      // query
+    // prepare za pisanje query-ja
     public function query($sql){
       $this->stmt = $this->dbh->prepare($sql);
     }          
@@ -60,19 +63,20 @@
       return $this->stmt->execute();
     }
 
+    // metodi ispod sluze za dobijanje rezultata
     // Get result set kao red objekata
     public function resultSet(){
       $this->execute();
       return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    // dobijamo objekat
+    // dobijamo jedan objekat, umesto fetchAll koristimo fetch
     public function single(){
       $this->execute();
       return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
 
-    // Get row count
+    // Get row count (rowCount je metod koji je deo PDO)
     public function rowCount(){
       return $this->stmt->rowCount();
     }
